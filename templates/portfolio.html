@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Main -->
+<div id="main">
+
+	<!-- Featured Post -->
+	<article class="post featured">
+		<header class="major" style="margin-bottom: 0px;">
+			<h2>My Data Science Portfolio</h2>
+			<p>A brief showcase of my data science projects</p>
+		</header>
+	</article>
+
+	<!-- Posts -->
+	<section class="posts">
+		<article>
+			<header>
+				<span class="date">November, 2022</span>
+				<h2>Tire depth estimation</h2>
+			</header>
+			<img src="{{ url_for('static', filename='images/pic02.jpg') }}" alt="" />
+			<p>
+			Estimating the depth of each groove of a tire from a 3d point cloud image, to check the health of the tire. 
+			Involves 3d data processing and filtering, clustering and statistical analysis.
+			</p>
+			<ul class="actions special">
+				<li><a href="https://github.com/GilbertoCunha/Tire-Depth-Estimation" class="button">Visit repository</a></li>
+			</ul>
+		</article>
+		<article>
+			<header>
+				<span class="date">November, 2022</span>
+				<h2>Intro to ML workshop</h2>
+			</header>
+			<img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt="" />
+			<p>
+			A workshop giving a brief overview to the ML field and a hands-on notebook for supervised classification. 
+			I gave this workshop to University of Minho students, and it was organized by the university's IEEE student branch.
+			</p>
+			<ul class="actions special">
+				<li><a href="https://github.com/GilbertoCunha/IEEE-ML-Workshop" class="button">Visit repository</a></li>
+			</ul>
+		</article>
+	</section>
+
+	<!-- Footer -->
+	<footer>
+		<ul class="actions special">
+			<li><a href="https://github.com/GilbertoCunha" class="button">Check all my repositories</a></li>
+		</ul>
+	</footer>
+
+</div>
+
+<div id="copyright">
+	<!--<ul><li>© Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li><li>Demo Images: <a href="https://unsplash.com">Unsplash</a></li></ul>-->
+	<ul><li>Gilberto Cunha</li></ul>
+</div>
+
+{% endblock content %}

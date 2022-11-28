@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -11,13 +11,9 @@ def home():
 def about():
     return render_template("about.html", title="About")
 
-@app.route("/generic", methods=["GET"])
-def generic():
-    return render_template("generic.html", title="Generic")
-
-@app.route("/elements", methods=["GET"])
-def elements():
-    return render_template("elements.html", title="Elements")
+@app.route("/portfolio", methods=["GET"])
+def portfolio():
+    return render_template("portfolio.html", title="Portfolio")
 
 @app.route("/contact", methods=["GET"])
 def contact():
