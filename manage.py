@@ -15,5 +15,9 @@ def generic():
 def elements():
     return render_template("elements.html", title="Elements")
 
+@app.route("/contacts", methods=["GET"])
+def contacts():
+    return render_template("contacts.html", title="Contacts")
+
 if __name__ == "__main__":
     app.run(debug=True)

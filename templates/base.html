@@ -7,7 +7,7 @@
 <html>
 	<head>
 		<title>{{ title }}</title>
-		<meta charset="utf-8" />
+		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
 		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}" /></noscript>
@@ -15,7 +15,42 @@
 
     <body class="is-preload">
 
-        {% block content %}{% endblock content %}
+		<!-- Wrapper -->
+		<div id="wrapper" class="fade-in">
+
+			{% block heading %}{% endblock heading %}
+
+			<!-- Header -->
+			<header id="header">
+				<a href="home" class="logo">Gilberto Cunha</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					{% for page in ["Home", "Generic", "Elements", "Contacts"] %}
+						{% if page == title %}
+							<li class="active"><a href="{{page.lower()}}">{{page}}</a></li>
+						{% else %}
+							<li><a href="{{page.lower()}}">{{page}}</a></li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/gilberto-cunha-5401ab1b8/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/GilbertoCunha" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="https://gitlab.com/GilbertoCunha" class="icon brands fa-gitlab"><span class="label">GitLab</span></a></li>
+				</ul>
+			</nav>
+
+        	{% block content %}{% endblock content %}
+
+			<!-- Copyright -->
+			<div id="copyright">
+				<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+			</div>
+
+		</div>
 
 		<!-- Scripts -->
 			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
