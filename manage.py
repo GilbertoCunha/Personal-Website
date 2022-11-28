@@ -7,6 +7,10 @@ app = Flask(__name__)
 def home():
     return render_template("home.html", title="Home")
 
+@app.route("/about", methods=["GET"])
+def about():
+    return render_template("about.html", title="About")
+
 @app.route("/generic", methods=["GET"])
 def generic():
     return render_template("generic.html", title="Generic")
@@ -15,9 +19,9 @@ def generic():
 def elements():
     return render_template("elements.html", title="Elements")
 
-@app.route("/contacts", methods=["GET"])
-def contacts():
-    return render_template("contacts.html", title="Contacts")
+@app.route("/contact", methods=["GET"])
+def contact():
+    return render_template("contact.html", title="Contact")
 
 if __name__ == "__main__":
     app.run(debug=True)

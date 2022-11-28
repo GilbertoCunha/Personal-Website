@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Main -->
+<div id="main">
+
+	<!-- Post -->
+	<section class="post">
+		<header class="major">
+			<!--<span class="date">April 25, 2017</span>-->
+			<h2>About me</h2>
+		</header>
+
+		<p><span class="image left"><img src="{{ url_for('static', filename='images/me.jpg') }}" alt="" 
+			style="width: 80%; border-radius:50%;"/></span>
+			
+			I am a Physics Engineer, graduated from University of Minho.
+
+			From very early in my academic path, the field of Data Science has been my primary interest. I have made multiple Data Science projects,
+			which you can find on my <a href="https://github.com/GilbertoCunha">Github profile</a>.
+
+			<br>
+
+			I consider myself a very good problem solver and critical thinker, which I believe is mostly due to my Physics background. It allows me to 
+			quickly tackle new problems or learn new skills.
+
+			<br>
+
+			On a more personal note, I love playing guitar, watching Formula 1 or reading Berserk.
+
+		</p>
+
+	</section>
+
+</div>
+
+<div id="copyright">
+	<!--<ul><li>© Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li><li>Demo Images: <a href="https://unsplash.com">Unsplash</a></li></ul>-->
+	<ul><li>Gilberto Cunha</li></ul>
+</div>
+
+{% endblock content %}

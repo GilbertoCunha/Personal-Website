@@ -28,7 +28,7 @@
 			<!-- Nav -->
 			<nav id="nav">
 				<ul class="links">
-					{% for page in ["Home", "Generic", "Elements", "Contacts"] %}
+					{% for page in ["About", "Generic", "Elements", "Contact"] %}
 						{% if page == title %}
 							<li class="active"><a href="{{page.lower()}}">{{page}}</a></li>
 						{% else %}
@@ -44,11 +44,6 @@
 			</nav>
 
         	{% block content %}{% endblock content %}
-
-			<!-- Copyright -->
-			<div id="copyright">
-				<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-			</div>
 
 		</div>
 
