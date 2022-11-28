@@ -15,9 +15,9 @@ def about():
 def portfolio():
     return render_template("portfolio.html", title="Portfolio")
 
-@app.route("/contact", methods=["GET"])
-def contact():
-    return render_template("contact.html", title="Contact")
+#@app.route("/contact", methods=["GET"])
+#def contact():
+#    return render_template("contact.html", title="Contact")
 
 if __name__ == "__main__":
     app.run(debug=True)
